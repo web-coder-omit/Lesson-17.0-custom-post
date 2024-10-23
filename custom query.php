@@ -99,63 +99,156 @@ function cptui_register_my_cpts() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );
-Register Custom Post Type Car
-// function create_car_cpt() {
+// Register Custom Post Type Car
+function create_car_cpt() {
 
-// 	$labels = array(
-// 		'name' => _x( 'Cars', 'Post Type General Name', 'car' ),
-// 		'singular_name' => _x( 'Car', 'Post Type Singular Name', 'car' ),
-// 		'menu_name' => _x( 'Cars', 'Admin Menu text', 'car' ),
-// 		'name_admin_bar' => _x( 'Car', 'Add New on Toolbar', 'car' ),
-// 		'archives' => __( 'Car Archives', 'car' ),
-// 		'attributes' => __( 'Car Attributes', 'car' ),
-// 		'parent_item_colon' => __( 'Parent Car:', 'car' ),
-// 		'all_items' => __( 'All Cars', 'car' ),
-// 		'add_new_item' => __( 'Add New Car', 'car' ),
-// 		'add_new' => __( 'Add New', 'car' ),
-// 		'new_item' => __( 'New Car', 'car' ),
-// 		'edit_item' => __( 'Edit Car', 'car' ),
-// 		'update_item' => __( 'Update Car', 'car' ),
-// 		'view_item' => __( 'View Car', 'car' ),
-// 		'view_items' => __( 'View Cars', 'car' ),
-// 		'search_items' => __( 'Search Car', 'car' ),
-// 		'not_found' => __( 'Not found', 'car' ),
-// 		'not_found_in_trash' => __( 'Not found in Trash', 'car' ),
-// 		'featured_image' => __( 'Featured Image', 'car' ),
-// 		'set_featured_image' => __( 'Set featured image', 'car' ),
-// 		'remove_featured_image' => __( 'Remove featured image', 'car' ),
-// 		'use_featured_image' => __( 'Use as featured image', 'car' ),
-// 		'insert_into_item' => __( 'Insert into Car', 'car' ),
-// 		'uploaded_to_this_item' => __( 'Uploaded to this Car', 'car' ),
-// 		'items_list' => __( 'Cars list', 'car' ),
-// 		'items_list_navigation' => __( 'Cars list navigation', 'car' ),
-// 		'filter_items_list' => __( 'Filter Cars list', 'car' ),
-// 	);
-// 	$args = array(
-// 		'label' => __( 'Car', 'car' ),
-// 		'description' => __( '', 'car' ),
-// 		'labels' => $labels,
-// 		'menu_icon' => '',
-// 		'supports' => array(),
-// 		'taxonomies' => array(),
-// 		'public' => true,
-// 		'show_ui' => true,
-// 		'show_in_menu' => true,
-// 		'menu_position' => 5,
-// 		'show_in_admin_bar' => true,
-// 		'show_in_nav_menus' => true,
-// 		'can_export' => true,
-// 		'has_archive' => true,
-// 		'hierarchical' => false,
-// 		'exclude_from_search' => false,
-// 		'show_in_rest' => true,
-// 		'publicly_queryable' => true,
-// 		'capability_type' => 'post',
-// 	);
-// 	register_post_type( 'car', $args );
+	$labels = array(
+		'name' => _x( 'Cars', 'Post Type General Name', 'car' ),
+		'singular_name' => _x( 'Car', 'Post Type Singular Name', 'car' ),
+		'menu_name' => _x( 'Cars', 'Admin Menu text', 'car' ),
+		'name_admin_bar' => _x( 'Car', 'Add New on Toolbar', 'car' ),
+		'archives' => __( 'Car Archives', 'car' ),
+		'attributes' => __( 'Car Attributes', 'car' ),
+		'parent_item_colon' => __( 'Parent Car:', 'car' ),
+		'all_items' => __( 'All Cars', 'car' ),
+		'add_new_item' => __( 'Add New Car', 'car' ),
+		'add_new' => __( 'Add New', 'car' ),
+		'new_item' => __( 'New Car', 'car' ),
+		'edit_item' => __( 'Edit Car', 'car' ),
+		'update_item' => __( 'Update Car', 'car' ),
+		'view_item' => __( 'View Car', 'car' ),
+		'view_items' => __( 'View Cars', 'car' ),
+		'search_items' => __( 'Search Car', 'car' ),
+		'not_found' => __( 'Not found', 'car' ),
+		'not_found_in_trash' => __( 'Not found in Trash', 'car' ),
+		'featured_image' => __( 'Featured Image', 'car' ),
+		'set_featured_image' => __( 'Set featured image', 'car' ),
+		'remove_featured_image' => __( 'Remove featured image', 'car' ),
+		'use_featured_image' => __( 'Use as featured image', 'car' ),
+		'insert_into_item' => __( 'Insert into Car', 'car' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Car', 'car' ),
+		'items_list' => __( 'Cars list', 'car' ),
+		'items_list_navigation' => __( 'Cars list navigation', 'car' ),
+		'filter_items_list' => __( 'Filter Cars list', 'car' ),
+	);
+	$args = array(
+		'label' => __( 'Car', 'car' ),
+		'description' => __( '', 'car' ),
+		'labels' => $labels,
+		'menu_icon' => '',
+		'supports' => array(),
+		'taxonomies' => array(),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'menu_position' => 5,
+		'show_in_admin_bar' => true,
+		'show_in_nav_menus' => true,
+		'can_export' => true,
+		'has_archive' => true,
+		'hierarchical' => false,
+		'exclude_from_search' => false,
+		'show_in_rest' => true,
+		'publicly_queryable' => true,
+		'capability_type' => 'post',
+	);
+	register_post_type( 'car', $args );
 
-// }
-// add_action( 'init', 'create_car_cpt', 0 );
+}
+add_action( 'init', 'create_car_cpt', 0 );
+
+
+function cptui_register_my_cpts_book() {
+
+	/**
+	 * Post Type: Books.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Books", "hello-elementor" ),
+		"singular_name" => esc_html__( "Book", "hello-elementor" ),
+		"all_items" => esc_html__( "My books", "hello-elementor" ),
+		"add_new" => esc_html__( "New book", "hello-elementor" ),
+		"featured_image" => esc_html__( "Book cover", "hello-elementor" ),
+	];
+
+	$args = [
+		"label" => esc_html__( "Books", "hello-elementor" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => "books",
+		"show_in_menu" => false,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "book", "with_front" => true ],
+		"query_var" => true,
+		"menu_icon" => "dashicons-media-text",
+		"supports" => [ "title", "editor", "excerpt" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "book", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts_book' );
+
+function cptui_register_my_cpts_hp() {
+
+	/**
+	 * Post Type: hp's.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "hp's", "hello-elementor" ),
+		"singular_name" => esc_html__( "hp", "hello-elementor" ),
+	];
+
+	$args = [
+		"label" => esc_html__( "hp's", "hello-elementor" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "hp", "with_front" => true ],
+		"query_var" => true,
+		"menu_icon" => "dashicons-camera-alt",
+		"supports" => [ "title", "editor", "thumbnail" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "hp", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts_hp' );
+
+
+
 
 // Stop to write code from there
 ?>
